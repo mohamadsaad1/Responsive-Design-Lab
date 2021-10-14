@@ -17,10 +17,152 @@ html {
   font-size: 62.5%
 }
 
+/* do body and main then ids */
+/* do body and main then ids */
+/* do body and main then ids */
+/* do body and main then ids */
+
 body {
   background-color: gray;
 /* Use a system font, if none are available use an available sans-sarif   font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  width: 300px;
+  background-color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+img {
+  border-radius: 50%;
+  border: pink 4px solid;
+  max-width: 190px;
+  align-items: center;
+  
+}
+
+h1, p {
+  margin: 0;
+}
+
+#status {
+  text-align: right;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: pink;
+  padding: 10px 20px 0 0;
+}
+
+#what-he-does {
+  display: none;
+}
+
+#occupation {
+  background-color: rgb(238, 194, 238);
+  padding: 17px;
+}
+
+#offer {
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+/* contacts */
+/* contacts */
+/* contacts */
+/* contacts */
+
+#contact {
+  display: flex;
+}
+
+#contact > p {
+  height: 100%;
+  width: 100%;
+  padding: 19px;
+  display: flex;
+  justify-content: center;
+}
+
+#contact > p:first-child{
+  background-color: rgb(218, 120, 136);
+}
+
+#contact > p:last-child{
+  background-color: rgb(240, 154, 168);
+}
+
+/* second view for wide also set width*/
+/* second view */
+/* second view */
+/* second view */
+
+
+@media only screen and (min-width: 750px) {
+  main {
+    display: grid;
+    text-align: left;
+    width: 625px;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+      "status name"
+      "img occupation"
+      "img what-he-does" 
+      "contact offer"
+  }
+
+  #status {
+    text-align: left;
+    margin-left: 10px;
+  }
+
+  img {
+    grid-area: img;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  
+  #contact {
+    grid-area: contact;
+  }
+
+  #what-he-does {
+    display: inline;
+    padding-left: 7px;
+    background-color: rgb(218, 120, 136);
+  }
+
+  #what-he-does > p {
+    border-left: blue 4px solid;
+    padding: 0 20px 0 8px;
+    font-size: 1.7rem;
+  }
+
+  #offer {
+    font-size: 2rem;
+    padding: 10px;
+    padding-left: 10px;
+    background-color: rgb(218, 120, 136);
+  } 
+  
+  /* maybe joining them is okay but cant customize them seperately if later i want to */
+
+  #name {
+    padding-left: 20px;
+    background-color:rgb(218, 120, 136);
+  }
+  #occupation{
+    padding-left: 20px;
+    background-color: rgb(218, 120, 136);
+  }
 }
